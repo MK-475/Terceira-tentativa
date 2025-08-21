@@ -1,0 +1,51 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background: #000;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+  overflow: hidden;
+}
+
+.star,
+.tunnel-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  will-change: transform, opacity;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.star {
+  color: white;
+  font-size: 2.5vmin; /* tamanho relativo à tela */
+  font-weight: bold;
+}
+
+.tunnel-image {
+  width: 12vmin; /* tamanho relativo à tela */
+  height: 12vmin;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Ajustes para celular */
+@media (max-width: 600px) {
+  .star {
+    font-size: 4vmin; /* aumenta levemente no celular para melhor visibilidade */
+  }
+
+  .tunnel-image {
+    width: 18vmin;
+    height: 18vmin;
+  }
+}

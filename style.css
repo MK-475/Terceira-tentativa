@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    perspective: 1200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.scene {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; /* permite quebrar linha no celular */
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.shape-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.shape {
+    width: 100px;
+    height: 140px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backface-visibility: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 10px;
+}
+
+.shape:focus,
+.shape:active {
+    outline: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* cores para cada shape */
+.shape-container:nth-child(1) .shape {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 0, 0, 0.3);
+}
+.shape-container:nth-child(2) .shape {
+    background: rgba(255, 165, 0, 0.2);
+    border-color: rgba(255, 165, 0, 0.3);
+}
+.shape-container:nth-child(3) .shape {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* cores para cada label */
+.shape-container:nth-child(1) .label {
+    color: rgba(255, 0, 0, 0.8);
+}
+.shape-container:nth-child(2) .label {
+    color: rgba(255, 165, 0, 0.8);
+}
+.shape-container:nth-child(3) .label {
+    color: rgba(0, 255, 255, 0.8);
+}
+
+/* 📱 Responsividade para celular */
+@media (max-width: 600px) {
+    .shape {
+        width: 80px;
+        height: 110px;
+        font-size: 1.5em;
+    }
+    .label {
+        font-size: 0.9em;
+    }
+}
