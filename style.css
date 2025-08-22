@@ -1,13 +1,19 @@
+/* Corpo da página */
+/* Corpo da página */
 body {
     margin: 0;
     overflow: hidden;
     background-color: black;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
     min-height: 100vh;
+    padding: 20px;           /* espaço interno */
+    box-sizing: border-box;
 }
 
+
+/* Container principal */
 .container {
     width: 100%;
     max-width: 1000px;
@@ -20,13 +26,16 @@ body {
 .scene {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap; /* permite quebrar linha no celular */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente dentro do container */
+    flex-wrap: wrap;         /* permite quebra de linha no celular */
     transform-style: preserve-3d;
     position: relative;
+    gap: 1px;               /* espaçamento entre shapes */
 }
 
+
+/* Container individual de cada shape */
 .shape-container {
     display: flex;
     flex-direction: column;
@@ -34,6 +43,7 @@ body {
     margin: 10px;
 }
 
+/* Estilo do shape */
 .shape {
     width: 100px;
     height: 140px;
@@ -63,73 +73,32 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-/* cores para cada shape */
-.shape-container:nth-child(1) .shape {
-    background: rgba(255, 0, 0, 0.2);
-    border-color: rgba(255, 0, 0, 0.3);
-}
-.shape-container:nth-child(2) .shape {
-    background: rgba(255, 165, 0, 0.2);
-    border-color: rgba(255, 165, 0, 0.3);
-}
-.shape-container:nth-child(3) .shape {
-    background: rgba(255, 255, 0, 0.2);
-    border-color: rgba(255, 255, 0, 0.3);
-}
-.shape-container:nth-child(4) .shape {
-    background: rgba(0, 128, 0, 0.2);
-    border-color: rgba(0, 128, 0, 0.3);
-}
-.shape-container:nth-child(5) .shape {
-    background: rgba(0, 0, 255, 0.2);
-    border-color: rgba(0, 0, 255, 0.3);
-}
-.shape-container:nth-child(6) .shape {
-    background: rgba(75, 0, 130, 0.2);
-    border-color: rgba(75, 0, 130, 0.3);
-}
-.shape-container:nth-child(7) .shape {
-    background: rgba(238, 130, 238, 0.2);
-    border-color: rgba(238, 130, 238, 0.3);
-}
-.shape-container:nth-child(8) .shape {
-    background: rgba(0, 255, 255, 0.2);
-    border-color: rgba(0, 255, 255, 0.3);
-}
+/* Cores para cada shape */
+.shape-container:nth-child(1) .shape { background: rgba(255,0,0,0.2); border-color: rgba(255,0,0,0.3); }
+.shape-container:nth-child(2) .shape { background: rgba(255,165,0,0.2); border-color: rgba(255,165,0,0.3); }
+.shape-container:nth-child(3) .shape { background: rgba(255,255,0,0.2); border-color: rgba(255,255,0,0.3); }
+.shape-container:nth-child(4) .shape { background: rgba(0,128,0,0.2); border-color: rgba(0,128,0,0.3); }
+.shape-container:nth-child(5) .shape { background: rgba(0,0,255,0.2); border-color: rgba(0,0,255,0.3); }
+.shape-container:nth-child(6) .shape { background: rgba(75,0,130,0.2); border-color: rgba(75,0,130,0.3); }
+.shape-container:nth-child(7) .shape { background: rgba(238,130,238,0.2); border-color: rgba(238,130,238,0.3); }
+.shape-container:nth-child(8) .shape { background: rgba(0,255,255,0.2); border-color: rgba(0,255,255,0.3); }
 
-
+/* Labels */
 .label {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1em;
     text-align: center;
 }
 
-/* cores para cada label */
-/* cores individuais para cada label */
-.shape-container:nth-child(1) .label {
-    color: rgba(255, 0, 0, 0.7);
-}
-.shape-container:nth-child(2) .label {
-    color: rgba(255, 165, 0, 0.7);
-}
-.shape-container:nth-child(3) .label {
-    color: rgba(255, 255, 0, 0.7);
-}
-.shape-container:nth-child(4) .label {
-    color: rgba(0, 128, 0, 0.7);
-}
-.shape-container:nth-child(5) .label {
-    color: rgba(0, 0, 255, 0.7);
-}
-.shape-container:nth-child(6) .label {
-    color: rgba(75, 0, 130, 0.7);
-}
-.shape-container:nth-child(7) .label {
-    color: rgba(238, 130, 238, 0.7);
-}
-.shape-container:nth-child(8) .label {
-    color: rgba(0, 255, 255, 0.7);
-}
+/* Cores individuais para cada label */
+.shape-container:nth-child(1) .label { color: rgba(255,0,0,0.7); }
+.shape-container:nth-child(2) .label { color: rgba(255,165,0,0.7); }
+.shape-container:nth-child(3) .label { color: rgba(255,255,0,0.7); }
+.shape-container:nth-child(4) .label { color: rgba(0,128,0,0.7); }
+.shape-container:nth-child(5) .label { color: rgba(0,0,255,0.7); }
+.shape-container:nth-child(6) .label { color: rgba(75,0,130,0.7); }
+.shape-container:nth-child(7) .label { color: rgba(238,130,238,0.7); }
+.shape-container:nth-child(8) .label { color: rgba(0,255,255,0.7); }
 
 /* --- RESPONSIVO PARA CELULARES --- */
 @media (max-width: 600px) {
@@ -150,7 +119,8 @@ body {
     }
 
     .scene {
-        justify-content: center; /* centraliza os shapes no celular */
+        justify-content: center; /* mantém os shapes centralizados */
+        gap: 10px; /* espaçamento entre shapes */
     }
 
     .container {
