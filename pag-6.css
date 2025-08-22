@@ -1,0 +1,68 @@
+/* Corpo da página */
+body {
+    background-color: black;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: flex-start; /* alinha ao topo */
+    padding-top: 50px;       
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+/* Card */
+.card6 {
+    background: rgba(75,0,130,0.2);
+    border: 1px solid rgba(75,0,130,0.3); 
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;       
+    min-height: 500px;  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     
+}
+
+/* Contador */
+#contador {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    color: #ffffff;                            
+    background-color: rgba(255, 255, 255, 0.4);    /* fundo semi-transparente */
+    box-shadow: 0 2px 8px rgba(151, 144, 144, 0.3); /* sombra */
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 10px;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Texto opcional */
+.texto {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* --- RESPONSIVO PARA CELULARES --- */
+@media screen and (max-width: 600px) {
+    .card6 {
+        width: 90%;       /* ocupa quase toda a tela */
+        padding: 15px;
+        min-height: auto;
+    }
+
+    #contador {
+        font-size: 1.2em; /* diminui fonte no celular */
+        padding: 10px 15px;
+        min-width: auto;
+    }
+}

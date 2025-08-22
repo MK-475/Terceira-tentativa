@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 3</title>
+    <link rel="stylesheet" href="pag-6.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scene">
+            <div class="card3-container">
+                <div class="card6">
+                    <!-- Contador -->
+                    <div id="contador"></div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const inicio = new Date("2024-10-20T00:00:00"); 
+
+                            function actualizarContador() {
+                                let ahora = new Date();
+                                let diff = ahora - inicio;
+
+                                let dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+                                let horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                                let minutos = Math.floor((diff / (1000 * 60)) % 60);
+                                let segundos = Math.floor((diff / 1000) % 60);
+
+                                document.getElementById("contador").textContent =
+                                    `${dias} días ${horas} horas ${minutos} minutos ${segundos} segundos`;
+                            }
+
+                            setInterval(actualizarContador, 1000);
+                            actualizarContador();
+                        });
+                    </script>
+                    <p class="texto">
+                        A vida é feita de momentos, e cada segundo conta. Desde o dia 20 de outubro de 2024, 
+                        cada instante tem sido uma contagem regressiva para algo especial que eu queria ter e quero ter com você. <br><br>
+
+                        Me daria  uma nova chance? <br><br>
+                        Eu prometo que vou fazer valer a pena, porque você é a razão pela qual eu acordo todos os dias com um sorriso no rosto. <br>
+                        Vamos criar novas memórias juntos, e fazer cada segundo valer a pena. <br><br>
+
+                        Por Favor...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

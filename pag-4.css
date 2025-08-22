@@ -12,9 +12,9 @@ body {
 }
 
 /* Card */
-.card3 {
-    background: rgba(255, 255, 0, 0.2);
-    border: 1px solid rgba(255, 255, 0, 0.3);
+.card4 {
+    background: rgba(0,128,0,0.2);
+    border: 1px solid rgba(0,128,0,0.3);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -38,36 +38,33 @@ body {
     text-align: justify;
 }
 
-/* Vídeo */
-.video-container video {
-    width: 425px;
-    max-width: 100%; /* garante ajuste automático */
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Container da imagem */
-.center {
+/* Container de imagens */
+.imagens-container {
     display: flex;
-    justify-content: center;
-    margin-top: 15px;
+    flex-direction: column; /* empilha as imagens verticalmente */
+    align-items: center;    /* centraliza horizontalmente */
     width: 100%;
 }
 
-/* Imagem */
-.img {
-    width: 425px;
+/* Imagens */
+.imagens-container img {
+    width: 350px;
     max-width: 100%; /* ajuste automático */
     height: auto;
     display: block;
+    margin-bottom: 15px; /* espaçamento entre imagens */
+}
+
+/* Remove margem da última imagem */
+.imagens-container img:last-child {
+    margin-bottom: 0;
 }
 
 /* --- RESPONSIVO PARA CELULARES --- */
 @media screen and (max-width: 600px) {
-    .card3 {
-        width: 90%; /* ocupa quase toda a tela */
-        padding: 15px;
+    .card4 {
+        width: 90%;       /* ocupa quase toda a tela */
+        padding: 15px;    /* padding reduzido */
     }
 
     .texto {
@@ -75,9 +72,8 @@ body {
         margin-bottom: 15px;
     }
 
-    .video-container video,
-    .img {
-        width: 100%; /* se ajusta à largura do card */
-        margin-top: 10px;
+    .imagens-container img {
+        width: 100%;      /* se ajusta à largura do card */
+        margin-bottom: 10px;
     }
 }
