@@ -1,0 +1,80 @@
+/* Corpo da página */
+body {
+    background-color: black;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: flex-start; /* alinha ao topo */
+    padding-top: 50px;       /* espaço entre topo da tela e o card */
+    padding-bottom: 50px;    /* espaço entre o card e o rodapé */
+}
+
+/* Card */
+.card3 {
+    background: rgba(255, 255, 0, 0.2);
+    border: 1px solid rgba(255, 255, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;       /* largura padrão */
+    min-height: 500px;  /* altura inicial */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;   
+    justify-content: flex-start; /* conteúdo começa do topo */
+    align-items: center;         /* centraliza horizontalmente */
+}
+
+/* Texto opcional */
+.texto {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Vídeo */
+.video-container video {
+    width: 425px;
+    max-width: 100%; /* garante ajuste automático */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Container da imagem */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Imagem */
+.img {
+    width: 425px;
+    max-width: 100%; /* ajuste automático */
+    height: auto;
+    display: block;
+}
+
+/* --- RESPONSIVO PARA CELULARES --- */
+/* --- RESPONSIVO PARA CELULARES --- */
+@media screen and (max-width: 600px) {
+    .card3 {
+        width: 90%; /* ocupa quase toda a tela */
+        padding: 15px;
+    }
+
+    .video-container video,
+    .img {
+        width: 100%; /* se ajusta à largura do card */
+    }
+
+    .texto {
+        font-size: 1em;
+    }
+}

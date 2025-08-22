@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-color: black;
     min-height: 100vh;
-    display: flex;
+    display: flex; 
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
