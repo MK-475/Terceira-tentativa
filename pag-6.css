@@ -9,6 +9,7 @@ body {
     padding-top: 50px;       
     padding-bottom: 50px;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Card */
@@ -32,7 +33,7 @@ body {
 
 /* Contador */
 #contador {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
     color: #ffffff;                            
     background-color: rgba(255, 255, 255, 0.4);    /* fundo semi-transparente */

@@ -9,6 +9,7 @@ body {
     padding-top: 50px;       /* espaço entre topo da tela e o card */
     padding-bottom: 50px;    /* espaço entre o card e o rodapé */
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Card */
